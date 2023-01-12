@@ -1,5 +1,9 @@
 import { Score } from "./Score";
 import { Cards } from "./Cards";
+import { CardsTo } from "../config/Card";
+import "./Game.css";
+
+
 
 export const Game = () => {
 
@@ -10,7 +14,9 @@ export const Game = () => {
                     <Score />
                         <div className="cards">
 
-                            < Cards />
+                            {CardsTo.map((carta) => (
+                                <Cards key={carta.id} {...carta} />
+                            ))}
 
                         </div>
             </div>

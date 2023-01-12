@@ -1,0 +1,14 @@
+.cards{
+
+display: grid;
+grid-template-columns: repeat(6, 1fr);
+gap: 1rem;
+
+}
+
+.cardsCards {
+
+    background-color:darkgray;
+    width: 100%;
+    aspect-ratio: 3/4;
+}
