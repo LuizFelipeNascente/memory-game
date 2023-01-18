@@ -1,10 +1,14 @@
-.game {
+.memory_game {
     padding: 1rem;
-}
-
-.game_content {
-
-    max-width: 600px;
+    color: rgb(255, 255, 255);
+  }
+  .memory_game_content {
+    max-width: 900px;
     margin: 0 auto;
-
-}
+  }
+  
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 1rem;
+  }
