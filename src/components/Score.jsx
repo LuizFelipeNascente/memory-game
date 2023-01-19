@@ -1,12 +1,14 @@
+import { Hook } from "./Hook"
 import "./Score.css"
 
 
 export const Score = () => {
+    const {nCardsOpen, nScore,} = Hook();
 
     return (
         <div className="score">
-        <Point title="Pontuação" value={0} />
-        <Point title="Numero de jogadas" value={0} />
+        <Point title="Pontuação" value={nScore} />
+        <Point title="Numero de jogadas" value={nCardsOpen} />
         </div>
     )
 }

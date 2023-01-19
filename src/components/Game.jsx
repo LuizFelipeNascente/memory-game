@@ -2,9 +2,19 @@ import "./Game.css";
 import { cardsTo } from "../constants/card";
 import { Cards } from "./Cards";
 import { Score } from "./Score";
+import { Manuel } from "./Manuel";
+import { MemoryGameProvider} from "./MemoryGame"
 
 
 export const Game = () => {
+  return (
+    <MemoryGameProvider>
+      <MemoryGameContent />
+    </MemoryGameProvider>
+  )
+};
+
+export const MemoryGameContent = () => {
   return (
     <div className="memory_game">
       <div className="memory_game_content">
@@ -16,7 +26,7 @@ export const Game = () => {
           ))}
         </div>
       </div>
-      
+      <Manuel />
     </div>
   );
-};
+}
