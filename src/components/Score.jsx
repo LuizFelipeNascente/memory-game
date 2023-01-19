@@ -3,7 +3,7 @@ import "./Score.css"
 
 
 export const Score = () => {
-    const {nCardsOpen, nScore,} = Hook();
+    const {nCardsOpen, nScore } = Hook();
 
     return (
         <div className="score">

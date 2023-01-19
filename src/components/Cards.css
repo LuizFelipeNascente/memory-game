@@ -16,7 +16,7 @@
   max-width: 95%;
 }
 
-.card:hover .card_content {
+.card-open .card_content {
   transform: rotateY(180deg);
 }
 
