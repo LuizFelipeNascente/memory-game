@@ -24,6 +24,14 @@ import { cardsTo } from "../constants/card"
         Scards(cardsTo)
     }
 
+    const reset = () => {
+        SidPairOk([0]);
+        ScardsOpen([]);
+        Scards(cardsTo);
+        SnCardsOpen(0);
+        SnScore([0]);
+    } 
+
    const compareCards = ([id1, id2]) => {
         const idPair1 = cards.find(({ id }) => id === id1)?.idImage;
         const idPair2 = cards.find(({ id }) => id === id2)?.idImage;
@@ -68,6 +76,7 @@ import { cardsTo } from "../constants/card"
         
         playGame,
         openCard,
+        reset,
 
         cardsOpen,
         idPairOk,

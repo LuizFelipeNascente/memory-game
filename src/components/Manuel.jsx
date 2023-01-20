@@ -1,10 +1,12 @@
 import "./Manuel.css";
+import { rating } from "./Result"
 import classNames from "classnames";
 import { Hook } from "./Hook";
+import { useMemo } from "react";
 
 export const Manuel = () => {
 
-  const { idPairOk, cards } = Hook();
+  const { idPairOk, cards, nCardsOpen, reset } = Hook();
 
   const zerou = cards.length === idPairOk.length * 2;
 
@@ -13,21 +15,26 @@ export const Manuel = () => {
   
   })
 
+  const hitRate = cards.length / nCardsOpen * 100;
+  const rates = useMemo (() => {
+    return rating.find(({ hit }) => hit < hitRate);
+  }, [hitRate]);
+
     return (
         <div className={cn}>
       <div className="result_pop">
         <p>Sua memória é</p>
-        <h1>Boa dimaiszi</h1>
+        <h1>{rates?.title}</h1>
         <img
-          src="/ate75.png"
-          height={150}
+          src={rates?.image}
+          height={200}
           alt="level"
         />
         <p>
           <strong>Sua média de acertos foi de </strong>
-          <span>60%</span>
+          <span>{hitRate.toFixed(0)}%</span>
         </p>
-        <button className="button">
+        <button className="button" onClick={reset}>
           New Game
         </button>
         
