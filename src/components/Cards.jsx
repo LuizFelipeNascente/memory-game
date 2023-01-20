@@ -5,28 +5,29 @@ import { Hook } from "./Hook";
 
 export const Cards = ({ id, idImage, image }) => {
 
-  const { openCard, cardsOpen } = Hook();
+  const { openCard, cardsOpen, idPairOk } = Hook();
 
   const control = () => {
     openCard({id, idImage});
   };
 
-    const cardOpen = cardsOpen.includes(id);
-    const nClick = true;
+    const cardFind = idPairOk.includes(idImage);
+    const cardOpen = cardFind || cardsOpen.includes(id);
+    const nClick = cardOpen;
 
     const cn = classNames("card", {
       "card-open": cardOpen,
     })
 
     return (
-      <div id={id} className={cn} onClick={control}>
+      <button id={id} className={cn} onClick={control} disabled={nClick}>
         <div className="card_content">
           <div className="card_frente" />
           <div className="card_costas">
             <img alt={idImage} width={300} src={image} />
           </div>
         </div>
-      </div>
+      </button>
     );
   };
 

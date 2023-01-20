@@ -2,6 +2,10 @@
   max-width: 100%;
   aspect-ratio: 3/4;
   perspective: 400px;
+  appearance: none;
+  border: none;
+  background-color: transparent;
+  padding: 0;
 }
 .card_content {
   position: relative;

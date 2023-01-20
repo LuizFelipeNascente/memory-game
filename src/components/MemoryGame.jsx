@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { createContext } from "react";
- 
+import { cardsTo } from "../constants/card" 
  export const MemoryGameContext = createContext();
 
  export const MemoryGameProvider = ({ children }) => {
@@ -11,21 +11,51 @@ import { createContext } from "react";
     const [nCardsOpen, SnCardsOpen] = useState(0);
     const [nScore, SnScore] = useState(0);
 
+// soma dos pontos
     const incremetCardsOpen = () => {
         SnCardsOpen((increment) => increment + 1);
     }
 
+    const scoreIncremnt = () => {
+        SnScore(point => point + 10)
+    }
+
+    const playGame = () => {
+        Scards(cardsTo)
+    }
+
+   const compareCards = ([id1, id2]) => {
+        const idPair1 = cards.find(({ id }) => id === id1)?.idImage;
+        const idPair2 = cards.find(({ id }) => id === id2)?.idImage;
+        return idPair1 === idPair2;
+    }
+
+// fazendo a validação de apenas duas cartas viradas
     const openCard = ({id, idImage}) => {
         incremetCardsOpen();
+
+        const cardThisOpen = cardsOpen.includes(id) || idPairOk.includes(idImage);
+        if (cardThisOpen) return;
+
         if (cardsOpen.length >= 2) {
-            return ScardsOpen([]);
+            return;
         }
         if (cardsOpen.length == 0) {
             return ScardsOpen([id])
         }
 
-        ScardsOpen((ids) => [...ids, id]);
-        const time = 1500;
+        const ids = [cardsOpen[0], id]
+        ScardsOpen(ids);
+
+
+        const cardsIden = compareCards(ids);
+        if (cardsIden) {
+            scoreIncremnt();
+            SidPairOk(ids => [...ids, idImage])
+        }
+
+        
+        const time = cardsIden ? 0 :1500;
         setTimeout(() => {
             ScardsOpen([])
         }, time);
@@ -35,10 +65,13 @@ import { createContext } from "react";
         cards,
         nCardsOpen,
         nScore,
-
+        
+        playGame,
         openCard,
 
-        cardsOpen
+        cardsOpen,
+        idPairOk,
+
     };
 
     return (
