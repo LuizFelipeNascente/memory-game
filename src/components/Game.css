@@ -1,6 +1,7 @@
 .memory_game {
     padding: 1rem;
-    color: rgb(255, 255, 255);
+    color: rgb(255,215,0);
+    
   }
   .memory_game_content {
     max-width: 900px;
@@ -11,4 +12,10 @@
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     gap: 1rem;
+  }
+
+  .info {
+    font-size: 25px;
+    color: rgb(226, 226, 225);
+    font-weight:700;
   }

@@ -22,8 +22,8 @@ export const Cards = ({ id, idImage, image }) => {
     return (
       <button id={id} className={cn} onClick={control} disabled={nClick}>
         <div className="card_content">
-          <div className="card_frente" />
-          <div className="card_costas">
+          <div className="card_front" />
+          <div className="card_verse">
             <img alt={idImage} width={300} src={image} />
           </div>
         </div>

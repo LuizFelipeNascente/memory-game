@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { createContext } from "react";
-import { cardsTo } from "../constants/card" 
+//import { cardsTo } from "../constants/card" 
+import { shuffle } from "./Shuffle";
  export const MemoryGameContext = createContext();
 
  export const MemoryGameProvider = ({ children }) => {
+    
     const [cards, Scards] = useState([]);
     const [idPairOk, SidPairOk] = useState([]);
     const [cardsOpen, ScardsOpen] = useState([]);
@@ -16,18 +18,21 @@ import { cardsTo } from "../constants/card"
         SnCardsOpen((increment) => increment + 1);
     }
 
-    const scoreIncremnt = () => {
+    const scoreIncremnt =  () => {
         SnScore(point => point + 10)
     }
 
-    const playGame = () => {
-        Scards(cardsTo)
+    const playGame = async () => {
+       
+        const cards = await shuffle()
+        Scards(cards)
+        
     }
 
     const reset = () => {
         SidPairOk([0]);
         ScardsOpen([]);
-        Scards(cardsTo);
+        cards();
         SnCardsOpen(0);
         SnScore([0]);
     } 
@@ -73,13 +78,12 @@ import { cardsTo } from "../constants/card"
         cards,
         nCardsOpen,
         nScore,
-        
+        cardsOpen,
+        idPairOk,        
         playGame,
         openCard,
         reset,
-
-        cardsOpen,
-        idPairOk,
+      
 
     };
 

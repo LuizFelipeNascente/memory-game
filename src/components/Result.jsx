@@ -10,7 +10,7 @@ export const rating = [
       hit: 55,
     },
     {
-      title: "É ruim que já teve noite deu querer beber veneno",
+      title: "Ruim ... que já teve noite deu querer beber veneno ♫",
       image: "ate45.png",
       hit: 35,
     },

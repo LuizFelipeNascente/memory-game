@@ -7,6 +7,11 @@
   background-color: transparent;
   padding: 0;
 }
+
+.card img {
+  max-width: 95%;
+}
+
 .card_content {
   position: relative;
   width: 100%;
@@ -16,31 +21,27 @@
   transform-style: preserve-3d;
 }
 
-.card img {
-  max-width: 95%;
-}
-
 .card-open .card_content {
   transform: rotateY(180deg);
 }
-
-.card_frente, .card_costas {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  cursor: pointer;
-  border-radius: 0.5rem;
-  overflow: hidden;
-}
-
-.card_frente {
+.card_front {
   background-image: url("../img/verso/verso.jpg");
   background-size: 160%;
   background-position: center;
 }
 
-.card_costas {
+.card_verse {
   transform: rotateY(180deg);
 }
+
+.card_front, .card_verse {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  cursor: pointer;
+}
+
