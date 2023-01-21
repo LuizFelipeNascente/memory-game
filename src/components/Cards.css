@@ -45,3 +45,21 @@
   cursor: pointer;
 }
 
+.card-find {
+  animation: animate 0.8s 0.5s forwards;
+}
+
+@keyframes animate {
+    0% {
+      transform: scale(1) rotate(0);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.1) rotate(360deg);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1) rotate(0);
+      opacity: 0.5;
+    }
+  }

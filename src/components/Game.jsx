@@ -16,7 +16,7 @@ export const Game = () => {
 };
 
 export const MemoryGameContent = () => {
-  const {cards, playGame, loading} = Hook ()
+  const {cards, playGame} = Hook ()
 
   useEffect(() => {
     playGame();
@@ -26,25 +26,17 @@ export const MemoryGameContent = () => {
     <div className="memory_game">
       <div className="memory_game_content">
         <h1>Teste da memória!</h1>
-        <div className="info">
-        É só encontrar os doze pares e saberá se está afetado pela magia Obliviate !
-        </div>
-        <Score />
-        
-        {loading ? (
-          <h1> SPECTRUM PATRONO </h1>
-        ) : (
-          <div className="cards">
-
-            {cards.map((props) => (
-              <Cards key={props.id} {...props} />
-            ))}
+          <div className="info">
+            Encontra todos os pares para saber se foiafetado pela magia Obliviate !
           </div>
-        )}
-          
-        
+            <Score />
+            <div className="cards">
+              {cards.map((props) => (
+              <Cards key={props.id} {...props} />
+              ))}
+            </div>
       </div>
-      <Manuel />
+        <Manuel />
     </div>
   );
 }

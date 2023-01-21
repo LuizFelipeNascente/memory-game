@@ -9,7 +9,6 @@ import { shuffle } from "./Shuffle";
     const [cards, Scards] = useState([]);
     const [idPairOk, SidPairOk] = useState([]);
     const [cardsOpen, ScardsOpen] = useState([]);
-
     const [nCardsOpen, SnCardsOpen] = useState(0);
     const [nScore, SnScore] = useState(0);
 
@@ -35,6 +34,8 @@ import { shuffle } from "./Shuffle";
         cards();
         SnCardsOpen(0);
         SnScore([0]);
+        playGame();
+        
     } 
 
    const compareCards = ([id1, id2]) => {

@@ -13,11 +13,12 @@ export const Cards = ({ id, idImage, image }) => {
 
     const cardFind = idPairOk.includes(idImage);
     const cardOpen = cardFind || cardsOpen.includes(id);
-    const nClick = cardOpen;
+    const nClick = cardOpen || cardsOpen.length > 1;
 
     const cn = classNames("card", {
       "card-open": cardOpen,
-    })
+      "card-find": cardFind, 
+    });
 
     return (
       <button id={id} className={cn} onClick={control} disabled={nClick}>

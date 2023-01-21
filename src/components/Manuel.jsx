@@ -37,7 +37,7 @@ export const Manuel = () => {
         <button className="button" onClick={reset}>
           New Game
         </button>
-        
+                
       </div>
     </div>
     )
