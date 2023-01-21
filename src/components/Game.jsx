@@ -27,7 +27,7 @@ export const MemoryGameContent = () => {
       <div className="memory_game_content">
         <h1>Teste da memória!</h1>
           <div className="info">
-            Encontra todos os pares para saber se foiafetado pela magia Obliviate !
+            Encontra todos os pares para saber se foi afetado pela magia Obliviate !
           </div>
             <Score />
             <div className="cards">
