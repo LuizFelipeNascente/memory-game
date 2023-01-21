@@ -10,12 +10,12 @@ export const rating = [
       hit: 55,
     },
     {
-      title: "Um pouco ruim, melhor investigar! Pode ser cupa do Obliviate ",
+      title: "Um pouco ruim, melhor investigar! Pode ser culpa do Obliviate ",
       image: "ate45.png",
       hit: 35,
     },
     {
-      title: "Preocupante ruim! Deve ser sequela do Obliviate",
+      title: "Preocupantemente ruim! Deve ser sequela do Obliviate",
       image: "ate30.png",
       hit: 0,
     },

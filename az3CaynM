@@ -1,0 +1,65 @@
+[33mcommit bb941c06cce42d4c39382d496bed805ff920c7d5[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Luiz Felipe <luizfelipe.nascente@gmail.com>
+Date:   Sat Jan 21 14:19:01 2023 -0300
+
+    correção de texto inicial
+
+[33mcommit 9e26a34bb9b43c6fd11c55d63243277ff05dbab4[m
+Author: Luiz Felipe <luizfelipe.nascente@gmail.com>
+Date:   Sat Jan 21 14:15:08 2023 -0300
+
+    Resta apenas reembaralhar ao iniciar uma nova partida
+
+[33mcommit 577045dde1155dcfaf0fa84235d4ec690bc6db4e[m
+Author: Luiz Felipe <luizfelipe.nascente@gmail.com>
+Date:   Fri Jan 20 01:34:24 2023 -0300
+
+    MVP
+
+[33mcommit d931418ffbbf38fe4604860bcb4cb793d3e0ed2e[m
+Author: Luiz Felipe <luizfelipe.nascente@gmail.com>
+Date:   Thu Jan 19 23:39:37 2023 -0300
+
+    Falta embaralhamento das cartas
+
+[33mcommit c083073aa6ca1dec46ac3bae363c2278f6035311[m
+Author: Luiz Felipe <luizfelipe.nascente@gmail.com>
+Date:   Thu Jan 19 21:42:11 2023 -0300
+
+    Validação do fim do jogo com pop up do manuel
+
+[33mcommit ef374a2cb0139f57421fe00a9bf177fc8dae76dd[m
+Author: Luiz Felipe <luizfelipe.nascente@gmail.com>
+Date:   Thu Jan 19 00:19:13 2023 -0300
+
+    Validando 2 card por vez
+
+[33mcommit 7568d1b9574503e39179db6bd2254357c1f21b83[m
+Author: Luiz Felipe <luizfelipe.nascente@gmail.com>
+Date:   Wed Jan 18 22:37:00 2023 -0300
+
+    travado no increment
+
+[33mcommit 6cbe10bbbfdf2e675b200f96964e23eb8e9aaa93[m
+Author: Luiz Felipe <luizfelipe.nascente@gmail.com>
+Date:   Wed Jan 18 20:04:10 2023 -0300
+
+    Cards com img e virando
+
+[33mcommit 139ede16239bf8a92eec119fb9556bd5b190d022[m
+Author: Luiz Felipe <luizfelipe.nascente@gmail.com>
+Date:   Wed Jan 11 23:14:45 2023 -0300
+
+    Grade implantada
+
+[33mcommit 0cccc1847e8cb0ec006f47dc50554fb178ab9b8e[m
+Author: Luiz Felipe <luizfelipe.nascente@gmail.com>
+Date:   Mon Jan 9 21:53:19 2023 -0300
+
+    Estrutura iniciada
+
+[33mcommit 88088f7ad1d933d3ba9a7d95c4cdf474f8483608[m
+Author: Luiz Felipe <luizfelipe.nascente@gmail.com>
+Date:   Sun Jan 8 10:18:43 2023 -0300
+
+    Initialize project using Create React App
